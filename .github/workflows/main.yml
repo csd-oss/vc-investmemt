@@ -25,5 +25,6 @@ jobs:
          - uses: deep5050/autopy-lot@master
            with:
              github_token: ${{ secrets.GITHUB_TOKEN}}
+             comment_magics: false
              output_dir: './python_file/'   
          - uses: CyberZHG/github-action-python-lint@0.0.2
