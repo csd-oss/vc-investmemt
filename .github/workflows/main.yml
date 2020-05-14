@@ -21,4 +21,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
          - uses: ResearchSoftwareActions/EnsureCleanNotebooksAction@1.1
+         - uses: actions/checkout@v1
+         - uses: deep5050/autopy-lot@master
+           with:
+             github_token: ${{ secrets.GITHUB_TOKEN}}
+             output_dir: './python_file/'   
          - uses: bulv1ne/python-style-check@v0.3
